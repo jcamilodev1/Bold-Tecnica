@@ -160,7 +160,7 @@
             left: 0;
             width: 2px;
             height: 100%;
-            background-color: $Azul;
+            background: $Azul;
           }
           #succes{
             color: $Azul;
@@ -184,6 +184,11 @@
                 color: $Rojo;
               } 
             }
+          }
+        }
+        .succes{
+          &::after{
+            background: $Rojo;
           }
         }
       }
