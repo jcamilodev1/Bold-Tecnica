@@ -11,6 +11,21 @@
   font-size: $fontSize + px;
   font-weight: $fontWeight;
 }
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(173, 173, 173); 
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #f1f1f1; 
+  }
+}
 .main{
   padding: 20px 40px;
   background-color: $Background;
@@ -50,6 +65,10 @@
   }
   &__buttons{
     &-date{
+      .active{
+        background-color: $Gris-claro;
+        font-weight: 700;
+      }
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -65,6 +84,7 @@
         padding: 10px 40px;
         text-align: center;
         cursor: pointer;
+        transition: all 0.5;
       }
     }
     &-filter{
@@ -91,7 +111,7 @@
     display: grid;
     grid-column: 1/3;
     grid-template-columns: repeat(4 , 1fr);
-    .raw{
+    .row{
       &__title{
         background: $Gradient;
         color: white;
@@ -119,14 +139,51 @@
         grid-column: 1/5;
         background-color: white;
         max-height: 500px;
-        &-raw{
+        border-radius: 0 0 10px 10px;
+        overflow-y: scroll;
+        box-shadow: inset 0px -6px 15px 1px #eaeaea94;
+        @include scrollbar();
+        &-row{
+          position: relative;
           padding: 10px 20px;
           display: grid;
           justify-items: center;
           grid-template-columns: repeat(5 , 1fr);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.178);
           font-family: $fontMain;
+          color: $Gris-claro;
+          border-radius: 0 0 10px 10px;
+          &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-color: $Azul;
+          }
           #succes{
             color: $Azul;
+            @include fonts( $fontMain, 16 , 500);
+          }
+          #card{
+            i{
+              color: rgba(255, 0, 0, 0.363);
+            }
+          }
+          #amount{
+            p{
+              margin-bottom: 10px;
+              &:first-child{
+                color: $Azul;
+              }
+              &:nth-child(2){
+                font-size: 12px;
+              }
+              &:last-child{
+                color: $Rojo;
+              } 
+            }
           }
         }
       }
@@ -134,7 +191,3 @@
   }
 }
 
-.active{
-  background-color: $Gris-claro;
-  font-weight: 700;
-}
