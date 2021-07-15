@@ -1,0 +1,320 @@
+{
+  "transaccionesHoy": [
+    {
+      "id": "GZQBEBD758AHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7711",
+      "monto": 25000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQ78BEBDDEAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 4411",
+      "monto": 77090,
+      "tipo": "visa"
+    },
+    {
+      "id": "GZ4QBEBD8SDAHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 5896",
+      "monto": 249000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEB48DAHSAS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 3456",
+      "monto": 250799,
+      "tipo": "american"
+    },
+    {
+      "id": "GZQBEBAS10DAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 1894",
+      "monto": 22500,
+      "tipo": "diners"
+    },
+    {
+      "id": "GZQBSD78EBDAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 8811",
+      "monto": 12000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEB4862TDAHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7711",
+      "monto": 582000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBD125AHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7851",
+      "monto": 89000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBDAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7752",
+      "monto": 14000,
+      "tipo": "visa"
+    },
+    {
+      "id": "GZQ24BEBDAHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7896",
+      "monto": 5500000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBDAH32S",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 0044",
+      "monto": 255000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZ96BEBDAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7711",
+      "monto": 32000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBD78AHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7851",
+      "monto": 450000,
+      "tipo": "visa"
+    }
+  ] ,
+  "transaccionesSeptiembre": [
+    {
+      "id": "GZQBEBD758AHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7711",
+      "monto": 25000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQ78BEBDDEAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 4411",
+      "monto": 77090,
+      "tipo": "visa"
+    },
+    {
+      "id": "GZ4QBEBD8SDAHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 5896",
+      "monto": 249000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEB48DAHSAS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 3456",
+      "monto": 250799,
+      "tipo": "american"
+    },
+    {
+      "id": "GZQBEBAS10DAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 1894",
+      "monto": 22500,
+      "tipo": "diners"
+    },
+    {
+      "id": "GZQBSD78EBDAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 8811",
+      "monto": 12000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEB4862TDAHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7711",
+      "monto": 582000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBD125AHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7851",
+      "monto": 89000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBDAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7752",
+      "monto": 14000,
+      "tipo": "visa"
+    },
+    {
+      "id": "GZQ24BEBDAHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7896",
+      "monto": 5500000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBDAH32S",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 0044",
+      "monto": 255000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZ96BEBDAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7711",
+      "monto": 32000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBD78AHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7851",
+      "monto": 450000,
+      "tipo": "visa"
+    }
+  ] ,
+  "transaccionesSemana": [
+    {
+      "id": "GZQBEBD758AHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7711",
+      "monto": 25000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQ78BEBDDEAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 4411",
+      "monto": 77090,
+      "tipo": "visa"
+    },
+    {
+      "id": "GZ4QBEBD8SDAHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 5896",
+      "monto": 249000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEB48DAHSAS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 3456",
+      "monto": 250799,
+      "tipo": "american"
+    },
+    {
+      "id": "GZQBEBAS10DAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 1894",
+      "monto": 22500,
+      "tipo": "diners"
+    },
+    {
+      "id": "GZQBSD78EBDAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 8811",
+      "monto": 12000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEB4862TDAHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7711",
+      "monto": 582000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBD125AHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7851",
+      "monto": 89000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBDAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7752",
+      "monto": 14000,
+      "tipo": "visa"
+    },
+    {
+      "id": "GZQ24BEBDAHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7896",
+      "monto": 5500000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBDAH32S",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 0044",
+      "monto": 255000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZ96BEBDAHS",
+      "transaccion": true,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7711",
+      "monto": 32000,
+      "tipo": "mastercard"
+    },
+    {
+      "id": "GZQBEBD78AHS",
+      "transaccion": false,
+      "fecha": "04/06/2020 - 17:14:24",
+      "tarjeta": "**** **** **** 7851",
+      "monto": 450000,
+      "tipo": "visa"
+    }
+  ] 
+}
