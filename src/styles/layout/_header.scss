@@ -1,0 +1,18 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: $Gradient;
+  &__link{
+    a{
+      margin-right: 20px;
+      color: white;
+      text-decoration: none;
+      font-family: $fontMain;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

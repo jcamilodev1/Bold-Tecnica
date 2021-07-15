@@ -1,0 +1,140 @@
+@mixin background-text () {
+  font-family: $fontMain;
+  font-weight: 700;
+  font-size: 40px;
+  background: -webkit-linear-gradient(0deg, rgba(17,30,108,0.7567401960784313) 0%, rgba(154,48,55,1) 34%, rgba(255,255,255,1) 99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin fonts ( $fontMain, $fontSize, $fontWeight){
+  font-family: $fontMain;
+  font-size: $fontSize + px;
+  font-weight: $fontWeight;
+}
+.main{
+  padding: 20px 40px;
+  background-color: $Background;
+  display: grid;
+  grid-template-columns: 1fr 2fr ;
+  grid-gap: 30px;
+  &__sales{
+    &__box{
+      text-align: center;
+      &-title{
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 15px;
+        background: $Gradient-box;
+        p{
+          @include fonts( $fontMain, 16 , 500);
+        }
+      }
+      &-amount{
+        background-color: white;
+        border-radius: 0px 0px 10px 10px;
+        padding: 20px;
+        #total-ventas{
+          @include background-text();
+        }
+        #fecha-total{
+          margin-top: 5px;
+          @include fonts( $fontMain, 14 , 300);
+          color: $Azul;
+        }
+      }
+    }
+  }
+  &__buttons{
+    &-date{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: white;
+      margin-bottom: 10px;
+      padding: 5px;
+      p{
+        width: 190px;
+        // background-color: $Gris-claro;
+        border-radius: 20px;
+        color: $Azul;
+        @include fonts( $fontMain, 14 , 400);
+        padding: 10px 40px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+    &-filter{
+      display: flex;
+      justify-content: flex-end;
+      >div{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: white;
+        color: $Azul;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+        p{
+          margin-right: 10px;
+          color: $Azul;
+          @include fonts( $fontMain, 14 , 400);       
+        }
+      }
+      }
+  }
+  &__table{
+    display: grid;
+    grid-column: 1/3;
+    grid-template-columns: repeat(4 , 1fr);
+    .raw{
+      &__title{
+        background: $Gradient;
+        color: white;
+        border-radius: 10px 10px 0 0;
+        padding: 10px 20px;
+        grid-column: 1/5;
+        p{
+          @include fonts( $fontMain, 16 , 500);
+        }
+      }
+      &__desc{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(5 , 1fr);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+        padding: 10px 20px;
+        background-color: white;
+        grid-column: 1/5;
+        p{
+          color: $Gris-oscuro;
+          @include fonts( $fontMain, 16 , 500);
+        }
+      }
+      &__table-transactions{
+        grid-column: 1/5;
+        background-color: white;
+        max-height: 500px;
+        &-raw{
+          padding: 10px 20px;
+          display: grid;
+          justify-items: center;
+          grid-template-columns: repeat(5 , 1fr);
+          font-family: $fontMain;
+          #succes{
+            color: $Azul;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active{
+  background-color: $Gris-claro;
+  font-weight: 700;
+}

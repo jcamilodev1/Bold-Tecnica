@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+</head>
+<body>
+  <header class="header">
+    <picture class="header__logo">
+      <a href="/"><img src="./assets/logo.svg" alt="bold"  title="bold"/></a>
+    </picture>
+    <div class="header__link">
+      <a href="/">Mi negocio</a>
+      <a href="https://ayuda.bold.co/" target="_blank">Ayuda <i class="fas fa-question"></i></a>
+    </div>
+  </header>
+  <main id="main" class="main">
+
+    <section class="main__sales">
+      <article class="main__sales__box">
+        <div class="main__sales__box-title">
+          <p>Total de ventas de <span>septiembre</span></p> <i class="fas fa-info-circle"></i></i> 
+        </div>
+        <div class="main__sales__box-amount">
+          <p id="total-ventas">$1'560.000</p>
+          <p id="fecha-total">Septiembre, 2020</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="main__buttons">
+      <div  class="main__buttons-date">
+        <p>Hoy</p>
+        <p>Esta semana</p>
+        <p>Septiembre</p>
+      </div>
+      <div class="main__buttons-filter">
+        <div>
+          <p>Filtrar</p> <i class="fas fa-sliders-h"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="main__table">
+      <div class="raw__title">
+        <p>Tus ventas de <span>Septiembre</span></p>
+      </div>
+      <div class="raw__desc">
+        <p>Transacción</p>
+        <p>Fecha y hora</p>
+        <p>Método de pago</p>
+        <p>Id de transaccion</p>
+        <p>Monto</p>
+      </div>
+      <div class="raw__table-transactions">
+        <div class="raw__table-transactions-raw">
+          <p id="succes">Cobro exitoso</p>
+          <p id="date">04/06/2020 - 17:14:24</p>
+          <p id="card">**** **** **** 7711</p>
+          <p id="id">GZQBEBDAHS</p>
+          <div id="">
+            <p>$25.000</p>
+            <p>Deduccion Bold</p>
+            <p>-$1.500</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://kit.fontawesome.com/c8f649ed44.js" crossorigin="anonymous"></script>
+</body>
+</html>
