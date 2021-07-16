@@ -287,6 +287,7 @@
   }
   .PopUp-mobile{
     position: relative;
+    font-family: $fontMain;
     #cerrar-pupUp{
       color: $Rojo;
       position: absolute;
@@ -309,10 +310,13 @@
       background-color: white;
       padding: 20px;
       border-radius: 20px;
+      font-family: $fontMain;
       p{
+      font-family: $fontMain;
         color: $Azul;
       }
       #amount{
+      font-family: $fontMain;
         p{
           margin-bottom: 5px;
           &:first-child{
