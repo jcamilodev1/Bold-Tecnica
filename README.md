@@ -1,6 +1,7 @@
 # BOLD 🚀
-### URL
 
+### URL
+https://bold-prueba.netlify.app/
 
 
 ### Installation  🔧
