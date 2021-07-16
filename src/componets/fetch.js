@@ -6,7 +6,7 @@ const api = async (url) =>{
   const dataToday = datos.transaccionesHoy
   const dataWeek = datos.transaccionesSemana
   const dataMonth = datos.transaccionesSeptiembre
-  return { dataToday, dataMonth, dataWeek }
+  return { dataToday, dataMonth, dataWeek ,datos}
 }
 
 export default api

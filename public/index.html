@@ -21,7 +21,7 @@
     <section class="main__sales">
       <article class="main__sales__box">
         <div class="main__sales__box-title">
-          <p>Total de ventas de <span>septiembre  </span></p>   <i class="fas fa-info-circle"></i> 
+          
         </div>
         <div class="main__sales__box-amount">
           <p id="total-ventas">$1'560.000</p>
@@ -37,30 +37,40 @@
         <p data-date="mes" id="mes">Septiembre</p>
       </div>
       <div class="main__buttons-filter">
-        <div>
+        <div class="filtrar">
           <p>Filtrar</p> <i class="fas fa-sliders-h"></i>
+        </div>
+        <div id="filtrar">
+          <div>
+            <p>Filtrar</p> <i class="fas fa-times" id="cerrar-filtro"></i></i>
+          </div>
+          <input type="radio" id="datafono" name="radio-group" value="datafono">
+          <label for="datafono">Cobro con datáfono</label>
+          <input type="radio" id="link" name="radio-group" value="link">
+          <label for="link">Cobros con link de pago</label>
+          <input type="radio" id="todos" name="radio-group" value="todos" checked>
+          <label for="todos">Ver todos</label>
         </div>
       </div>
     </section>
 
-    <section class="main__table">
+    <section class="main__table ">
       <div class="row__title">
         <p>Tus ventas de <span>Septiembre</span></p>
       </div>
       <div class="row__desc">
         <p>Transacción</p>
-        <p>Fecha y hora</p>
-        <p>Método de pago</p>
-        <p>Id de transaccion</p>
+        <p class="mobile">Fecha y hora</p>
+        <p class="mobile">Método de pago</p>
+        <p class="mobile">Id de transaccion</p>
         <p>Monto</p>
       </div>
       <div class="row__table-transactions " id="table-container">
         <div class="row__table-transactions-row">
-          <!-- <p id="succes"><i class="fas fa-link"></i> Cobro exitoso</p> #} -->
           <p id="succes"><i class="fas fa-mobile-alt"></i> Cobro exitoso</p>
-          <p id="date">04/06/2020 - 17:14:24</p>
-          <p id="card"><i class="fab fa-cc-mastercard"></i> **** **** **** 7711</p>
-          <p id="id">GZQBEBDAHS</p>
+          <p id="date" class="mobile">04/06/2020 - 17:14:24</p>
+          <p id="card" class="mobile"><i class="fab fa-cc-mastercard"></i> **** **** **** 7711</p>
+          <p id="id" class="mobile">GZQBEBDAHS</p>
           <div id="amount">
             <p>$25.000</p>
             <p>Deduccion Bold</p>
@@ -70,6 +80,31 @@
         
       </div>
     </section>
+    <div class="PopUp-mobile">
+      <div class="PopUp-mobile-container">
+        <i class="fas fa-times" id="cerrar-pupUp"></i>
+        <div>
+          <p>Transacción</p>
+          <p>Fecha y hora</p>
+          <p >Método de pago</p>
+          <p >Id de transaccion</p>
+          <p>Monto</p>
+        </div>
+        <div>
+            <p id="succes"><i class="fas fa-mobile-alt"></i> Cobro exitoso</p>
+            <p id="date" >04/06/2020 - 17:14:24</p>
+            <p id="card"><i class="fab fa-cc-mastercard"></i> **** **** **** 7711</p>
+            <p id="id" >GZQBEBDAHS</p>
+            <div id="amount">
+              <p>$25.000</p>
+              <p>Deduccion Bold</p>
+              <p>-$1.500</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </main>
   <script src="https://kit.fontawesome.com/c8f649ed44.js" crossorigin="anonymous"></script>
 </body>

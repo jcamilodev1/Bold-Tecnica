@@ -1,13 +1,25 @@
 import api from './fetch.js'
 
-const obtenerMes = () => {
+const obtenerFecha = () => {
   let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
   let date = new Date();
   let mes_name = date.getMonth();
-  document.getElementById("mes").innerHTML = meses[mes_name]
+  let año = date.getFullYear()
+  return {
+    mes: meses[mes_name],
+    año: año
+  }
+  
 }
-
-const seleccion = async ( mouth,Week, Today) => {
+const prinTotal = (data, opcion) => {
+  const fecha = obtenerFecha()
+  let total = "total" +  opcion
+  document.querySelector(".main__sales__box-title").innerHTML = `<p>Total de ventas de <span> ${fecha.mes} </span></p>   <i class="fas fa-info-circle"></i> ` 
+  document.getElementById("mes").innerHTML = fecha.mes
+  document.getElementById("total-ventas").innerHTML = `${data[total]}`
+  document.getElementById("fecha-total").innerHTML = `${fecha.mes}, ${fecha.año}`
+}
+const seleccion = async ( mouth,Week, Today, data) => {
   const mouthcontainer = document.querySelector(".main__buttons-date")
   mouthcontainer.addEventListener("click", e => {
     if(e.target.localName == "p"){
@@ -16,7 +28,7 @@ const seleccion = async ( mouth,Week, Today) => {
           e.classList.remove("active")
         }
       })
-      pintarHtml(e.target.dataset.date,mouth,Week, Today )
+      pintarHtml(e.target.dataset.date,mouth,Week, Today, data )
       e.target.classList.add("active")
     }
   })
@@ -36,88 +48,83 @@ const cardType = (type) => {
     return card[type];
 }
   
-const pintarHtml = async (target, mouth,Week,Today) => {
+const pintarHtml = async (target, mouth,Week,Today, data) => {
   const table = document.getElementById("table-container")
   table.innerHTML =""
   if(target =="mes"){
-    mouth.forEach(mes => {
-      table.innerHTML += `<div class="row__table-transactions-row ${mes.transaccion ? "": "succes"}">
-      <!-- <p id="succes"><i class="fas fa-link"></i> Cobro exitoso</p> #} -->
-      <p id="succes"><i class="fas fa-${mes.modo == "datafono" ? 'mobile-alt' : "link" }"></i> ${mes.transaccion ? "Cobro exitoso": "Cobro no realizado"}</p>
-      <p id="date">${mes.fecha}</p>
-      <p id="card">${cardType(mes.tipo)} ${mes.tarjeta}</p>
-      <p id="id">${mes.id}</p>
-      <div id="amount">
-        <p>${mes.monto}</p>
-        <p>Deduccion Bold</p>
-        <p>-$${calcular(mes.monto)}</p>
-      </div>
-    </div>`
-    })
+    prinTotal(data ,target)
+    filtro(mouth)
   }
   if(target =="semana"){
-    Week.forEach(semana => {
-      table.innerHTML += `<div class="row__table-transactions-row ${semana.transaccion ? "": "succes"}">
-      <!-- <p id="succes"><i class="fas fa-link"></i> Cobro exitoso</p> #} -->
-      <p id="succes"><i class="fas fa-${semana.modo == "datafono" ? 'mobile-alt' : "link" }"></i> ${semana.transaccion ? "Cobro exitoso": "Cobro no realizado"}</p>
-      <p id="date">${semana.fecha}</p>
-      <p id="card">${cardType(semana.tipo)} ${semana.tarjeta}</p>
-      <p id="id">${semana.id}</p>
-      <div id="amount">
-        <p>${semana.monto}</p>
-        <p>Deduccion Bold</p>
-        <p>-$${calcular(semana.monto)}</p>
-      </div>
-    </div>`
-    })
-    
+    prinTotal(data, target)
+    filtro(Week)
   }
   if(target =="hoy"){
-    Today.forEach(hoy => {
-      table.innerHTML += `<div class="row__table-transactions-row ${hoy.transaccion ? "": "succes"}">
-      <!-- <p id="succes"><i class="fas fa-link"></i> Cobro exitoso</p> #} -->
-      <p id="succes"><i class="fas fa-${hoy.modo == "datafono" ? 'mobile-alt' : "link" }"></i> ${hoy.transaccion ? "Cobro exitoso": "Cobro no realizado"}</p>
-      <p id="date">${hoy.fecha}</p>
-      <p id="card">${cardType(hoy.tipo)} ${hoy.tarjeta}</p>
-      <p id="id">${hoy.id}</p>
-      <div id="amount">
-        <p>${hoy.monto}</p>
-        <p>Deduccion Bold</p>
-        <p>-$${calcular(hoy.monto)}</p>
-      </div>
-    </div>`
-    })
-    
+    prinTotal(data,target)
+    filtro(Today)
   }
 }
-const pintarDefault  = (Today) => {  
+const html = (date) => {
+  const table = document.getElementById("table-container")
+  table.innerHTML += `<div class="row__table-transactions-row ${date.transaccion ? "": "succes"}">
+  <p id="succes"><i class="fas fa-${date.modo == "datafono" ? 'mobile-alt' : "link" }"></i> ${date.transaccion ? "Cobro exitoso": "Cobro no realizado"} </p><i onclick="abrirPopUp('${date.id}')"class="fas fa-plus mobile-view"></i>
+  <p id="date" class="mobile">${date.fecha}</p>
+  <p id="card" class="mobile">${cardType(date.tipo)} ${date.tarjeta}</p>
+  <p id="id" class="mobile">${date.id}</p>
+  <div id="amount">
+    <p>${date.monto}</p>
+    <p>Deduccion Bold</p>
+    <p>-$${calcular(date.monto)}</p>
+  </div>
+</div>`
+}
+const pintarDefault  = (Today, datos) => {  
   const table = document.getElementById("table-container")
   const hoy = document.getElementById("hoy")
   hoy.classList.add("active")
-  Today.forEach(hoy => {
-    table.innerHTML += `<div class="row__table-transactions-row ${hoy.transaccion ? "": "succes"}">
-    <!-- <p id="succes"><i class="fas fa-link"></i> Cobro exitoso</p> #} -->
-    <p id="succes"><i class="fas fa-${hoy.modo == "datafono" ? 'mobile-alt' : "link" }"></i> ${hoy.transaccion ? "Cobro exitoso": "Cobro no realizado"}</p>
-    <p id="date">${hoy.fecha}</p>
-    <p id="card">${cardType(hoy.tipo)} ${hoy.tarjeta}</p>
-    <p id="id">${hoy.id}</p>
-    <div id="amount">
-      <p>${hoy.monto}</p>
-      <p>Deduccion Bold</p>
-      <p>-$${calcular(hoy.monto)}</p>
-    </div>
-  </div>`
+  filtro(Today)
+  prinTotal(datos, "hoy")
+}
+const filtrar = (mouth) => {
+  const table = document.getElementById("table-container")
+  table.innerHTML =""
+  const datafono = document.getElementById("datafono").checked
+  const link = document.getElementById("link").checked
+  const todos = document.getElementById("todos").checked
+  if(datafono){
+    mouth.forEach(e => {
+      if(e.modo == "datafono"){
+        html(e)
+      }
+    })
+  }
+  if(link){
+    mouth.forEach(e => {
+      if(e.modo == "link"){
+        html(e)
+      }
+    })
+  }
+  if(todos){
+    mouth.forEach(e => {
+        html(e)
+    })
+  }
+}
+const filtro = (mouth) => {
+  const tableCheck = document.getElementById("filtrar")
+  filtrar(mouth)
+  tableCheck.addEventListener("click", e => {
+    filtrar(mouth)
   })
-
 }
 const detectHtml = async () => {
   const datosapi = await api("../assets/fakeApi.json")
   const mouth = await datosapi.dataMonth
   const Week = await datosapi.dataWeek
   const Today = await datosapi.dataToday
-  obtenerMes()
-  await seleccion(mouth,Week, Today)
-  pintarDefault(Today)
+  await seleccion(mouth,Week, Today, datosapi.datos)
+  pintarDefault(Today, datosapi.datos)
 }
 
 export default detectHtml
