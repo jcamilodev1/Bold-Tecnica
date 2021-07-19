@@ -71,11 +71,14 @@ const html = (date) => {
   <p id="date" class="mobile">${date.fecha}</p>
   <p id="card" class="mobile">${cardType(date.tipo)} ${date.tarjeta}</p>
   <p id="id" class="mobile">${date.id}</p>
-  <div id="amount">
-    <p>${date.monto}</p>
-    <p>Deduccion Bold</p>
-    <p>-$${calcular(date.monto)}</p>
-  </div>
+  ${date.transaccion ? `<div id="amount">
+  <p>${date.monto}</p>
+  <p>Deduccion Bold</p>
+  <p>-$${calcular(date.monto)}</p>
+</div>`: `<div id="amount">
+<p>${date.monto}</p>
+</div>` }
+  
 </div>`
 }
 const pintarDefault  = (Today, datos) => {  
